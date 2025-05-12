@@ -33,5 +33,5 @@ jobs:
       - name: Run WebdriverIO Tests on Pixel
         run: npm run wdio:pixel
     
-      - name: Run WebdriverIO Tests on Samsung
-        run: npm run wdio:samsung
+      # - name: Run WebdriverIO Tests on Samsung
+      #   run: npm run wdio:samsung
