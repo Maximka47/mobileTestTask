@@ -15,7 +15,6 @@ exports.config = {
   capabilities: [{
 
     platformName: 'Android',
-
     'appium:deviceName'      : 'Google Pixel 3',
     'appium:platformVersion' : '9.0',
     'appium:automationName'  : 'UiAutomator2',
