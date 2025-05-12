@@ -8,6 +8,7 @@
     "@wdio/browserstack-service": "^9.12.7"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio:pixel": "wdio run ./wdio.pixel.conf.js",
+    "wdio:samsung": "wdio run ./wdio.samsung.conf.js"
   }
 }

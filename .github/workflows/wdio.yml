@@ -30,5 +30,8 @@ jobs:
           echo "BROWSERSTACK_USERNAME is set: ${{ secrets.BROWSERSTACK_USERNAME != '' }}"
           echo "Access key length: ${#BROWSERSTACK_ACCESS_KEY}"
 
-      - name: Run WebdriverIO Tests
-        run: npm run wdio
+      - name: Run WebdriverIO Tests on Pixel
+        run: npm run wdio:pixel
+    
+      - name: Run WebdriverIO Tests on Samsung
+        run: npm run wdio:samsung
