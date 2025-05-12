@@ -12,7 +12,7 @@ describe('Swipe Test Suite', () => {
         await expect(SwipePage.jsCard).toBeDisplayed();
     });
     it('should scroll down the page', async () => {
-        await SwipePage.scrollUntilVisible(SwipePage.secretMessage);
+        await SwipePage.scrollUntilVisible(SwipePage.secretMessage,10,300);
         await expect(SwipePage.secretLogo).toBeDisplayed();
         await expect(SwipePage.secretMessage).toBeDisplayed();
     });
