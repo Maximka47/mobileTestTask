@@ -1,9 +1,9 @@
-name: Run WebdriverIO Tests on Push
+name: Run WebdriverIO Tests on BrowserStack
 
 on:
   push:
     branches:
-      - main
+      - main  # or replace with your working branch
 
 jobs:
   test:
@@ -14,16 +14,21 @@ jobs:
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # or match your local version
+          node-version: 18  # Or match your local version
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Run WebdriverIO tests
+      - name: Debug environment (optional)
+        run: |
+          echo "BROWSERSTACK_USERNAME is set: ${{ secrets.BROWSERSTACK_USERNAME != '' }}"
+          echo "Access key length: ${#BROWSERSTACK_ACCESS_KEY}"
+
+      - name: Run WebdriverIO Tests
         run: npm run wdio
