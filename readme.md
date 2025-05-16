@@ -14,34 +14,44 @@ This repository contains automated end-to-end tests for a sample Android applica
 ## Steps to Install
 
 1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/your-username/MobileTestTask.git
-   cd MobileTestTask
-   ```
+
+```sh
+git clone https://github.com/your-username/MobileTestTask.git
+cd MobileTestTask
+
+```
 
 2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
+
+```sh
+npm install
+
+```
 
 ## Steps to Launch
 
 1. **Set BrowserStack credentials:**
 
-   Export your credentials as environment variables:
-   ```sh
-   export BROWSERSTACK_USERNAME=your_browserstack_username
-   export BROWSERSTACK_ACCESS_KEY=your_browserstack_access_key
-   ```
+Export your credentials as environment variables:
+
+```sh
+export BROWSERSTACK_USERNAME=your_browserstack_username
+export BROWSERSTACK_ACCESS_KEY=your_browserstack_access_key
+
+```
 
 2. **Run tests on Google Pixel 3:**
-   ```sh
-   npm run wdio:pixel
-   ```
+
+```sh
+npm run wdio:pixel
+
+```
 
 3. **Run tests on Samsung Galaxy S10:**
-   ```sh
-   npm run wdio:samsung
-   ```
+
+```sh
+npm run wdio:samsung
+
+```
 
 You can also configure and run tests via GitHub Actions using the workflow in [.github/workflows/wdio.yml](.github/workflows/wdio.yml).
